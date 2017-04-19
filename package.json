@@ -12,6 +12,11 @@
     "postversion": "git push --follow-tags && npm publish --access=public",
     "test": "jest"
   },
+  "files": [
+    "lib/",
+    "lib.es2015/",
+    "umd/"
+  ],
   "jest": {
     "roots": [
       "<rootDir>/src"
