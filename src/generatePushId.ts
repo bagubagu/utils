@@ -17,7 +17,7 @@
 const PUSH_CHARS =
   "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";
 
-export default function generatePushId() {
+export const generatePushId = (): string => {
   // Timestamp of last push, used to prevent local collisions if you push twice in one ms.
   let lastPushTime = 0;
 
