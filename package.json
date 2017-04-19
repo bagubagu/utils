@@ -1,0 +1,26 @@
+{
+  "name": "@bagubagu/utils",
+  "version": "0.1.0",
+  "description": "Bagubagu Utilities",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "module": "lib.es2015/index.js",
+  "jsnext.main": "lib.es2015/index.js",
+  "scripts": {
+    "build": "tsc -p . && tsc -p tsconfig.es2015.json && webpack && webpack --optimize-minimize",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "url": "https://github.com/bagubagu/utils.git",
+    "type": "git"
+  },
+  "author": "Bagubagu Studio (https://bagubagu.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/faker": "^4.1.0",
+    "@types/firebase": "^2.4.31",
+    "@types/node": "^7.0.13",
+    "webpack": "^2.4.1"
+  }
+}
