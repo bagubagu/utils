@@ -1,4 +1,4 @@
-# Bagubagu Utilities
+# Bagubagu Utilities [![Build Status](https://travis-ci.org/bagubagu/utils.svg?branch=master)](https://travis-ci.org/bagubagu/utils)
 
 Common Typescript/Javascript utilities that we use at Bagubagu Studio.
 
@@ -38,7 +38,7 @@ Generate a firebase like push Id
 import { generatePushId } from '@bagubagu/utils';
 
 const pushId = generatePushId();
-console.log(pushId);
+console.log(pushId);  // -KiA4eelV_DYbflp0YcW
 ```
 
 ### encodeFirebaseKey
@@ -50,6 +50,17 @@ encode email address then use it as key.
 ```typescript
 import {encodeFirebaseKey} from '@bagubagu/utils';
 
-const email = 'louis.larry@gmail.com';
-const key = encodeFirebaseKey(email);
+const email = 'monyet@kambing.com';
+const key = encodeFirebaseKey(email); // monyet%40kambing%2Ecom 
+```
+
+### decodeFirebaseKey
+
+Decode an encoded firebase key.
+
+```typescript
+import { decodeFirebaseKey } from '@bagubagu/utils';
+
+const encodedKey = 'monyet%40kambing%2Ecom';
+console.log(decodeFirebaseKey(encodeKey));  // monyet@kambing.com
 ```
