@@ -32,13 +32,24 @@ In a browser environment
 
 ### generatePushId
 
-Generate a firebase like push Id
+Generate a firebase like push Id.
 
 ```typescript
 import { generatePushId } from '@bagubagu/utils';
 
 const pushId = generatePushId();
 console.log(pushId);  // -KiA4eelV_DYbflp0YcW
+```
+
+### generateReadableId
+
+Generate human readable unique Id.
+
+```typescript
+import { generateReadableId } from '@bagubagu/utils';
+
+console.log(generateReadableId()); // black-velvet-48
+console.log(generateReadableId({language: 'id'})); // kursi-cantik-39
 ```
 
 ### encodeFirebaseKey
@@ -64,3 +75,4 @@ import { decodeFirebaseKey } from '@bagubagu/utils';
 const encodedKey = 'monyet%40kambing%2Ecom';
 console.log(decodeFirebaseKey(encodeKey));  // monyet@kambing.com
 ```
+
