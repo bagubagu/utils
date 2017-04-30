@@ -70,3 +70,23 @@ const encodedKey = 'monyet%40kambing%2Ecom';
 console.log(decodeFirebaseKey(encodeKey));  // monyet@kambing.com
 ```
 
+### objectEntries
+
+Make object keys and values available through for of loop.
+Requires tsconfig.json to set
+`compilerOptions.target: "es2015"` and `compilerOptions.lib: [ "es2015" ]`
+
+```typescript
+import { objectEntries } from "@bagubagu/utils";
+
+const weapons = {
+    thor: "mjolnir", spiderman: "web",
+    wonderwoman: "rope", hulk: "rage"
+};
+
+for (const [key, value] of objectEntries(weapons)) {
+    if (key === "hulk") {
+        console.log(key + ': ' + value);    // hulk: rage
+    }
+}
+```
