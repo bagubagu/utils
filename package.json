@@ -7,15 +7,14 @@
   "module": "lib.es2015/index.js",
   "jsnext.main": "lib.es2015/index.js",
   "scripts": {
-    "build": "tsc -p . && tsc -p tsconfig.es2015.json && webpack && webpack --optimize-minimize",
+    "build": "tsc -p . && tsc -p tsconfig.es2015.json",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags && npm publish --access=public",
     "test": "jest"
   },
   "files": [
     "lib/",
-    "lib.es2015/",
-    "umd/"
+    "lib.es2015/"
   ],
   "jest": {
     "roots": [
@@ -46,8 +45,7 @@
     "jest": "^19.0.2",
     "ts-jest": "^19.0.10",
     "ts-node": "^3.0.2",
-    "typescript": "^2.2.2",
-    "webpack": "^2.4.1"
+    "typescript": "^2.2.2"
   },
   "dependencies": {}
 }

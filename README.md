@@ -22,12 +22,6 @@ With Node
 const { generatePushId, encodeFirebaseKey} = require('@bagubagu/utils');
 ```
 
-In a browser environment
-
-```html
-<script src="bagubagu-utils.min.js"></script>
-```
-
 ## API
 
 ### generatePushId
