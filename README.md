@@ -90,3 +90,12 @@ for (const [key, value] of objectEntries(weapons)) {
     }
 }
 ```
+
+### getRandom
+
+Get Random number between floor and ceiling
+```typescript
+import { getRandom } from '@bagubagu/utils';
+
+console.log(getRandom(1,10));   // output a number between 1 and 10
+```

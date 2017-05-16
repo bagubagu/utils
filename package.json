@@ -10,7 +10,8 @@
     "build": "tsc -p . && tsc -p tsconfig.es2015.json",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags && npm publish --access=public",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "files": [
     "lib/",
