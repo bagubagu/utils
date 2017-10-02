@@ -99,3 +99,13 @@ import { getRandom } from '@bagubagu/utils';
 
 console.log(getRandom(1,10));   // output a number between 1 and 10
 ```
+
+### date2String
+
+Change date value to string value with semantic format
+```typescript
+import { date2String } from '@bagubagu/utils';
+
+const dateValue = new Date();
+console.log(date2String(dateValue));   // output a string with 'yyyy-mm-dd' format
+```
