@@ -43,6 +43,7 @@
     "@types/firebase": "^2.4.31",
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.13",
+    "aws-sdk": "^2.291.0",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.10",
     "ts-node": "^3.0.2",

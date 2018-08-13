@@ -1,10 +1,9 @@
 /**
  * Get random number between min and max
- * @param floor Minimum value (included)
- * @param ceiling Maximum value (excluded)
+ * @param min Minimum value (included)
+ * @param max Maximum value (included)
  */
 
-export const getRandom = (floor: number, ceiling: number) => {
-    return Math.floor(Math.random() * (ceiling - floor + 1)) + floor;
+export const getRandom = (min: number, max: number) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
