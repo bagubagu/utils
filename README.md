@@ -12,27 +12,42 @@ npm install @bagubagu/utils --save
 
 with Typescript
 
-```tyescript
-import { generatePushId, encodeFirebaseKey } from '@bagubagu/utils';
+```ts
+import { generatePushId, encodeFirebaseKey } from "@bagubagu/utils";
 ```
 
 With Node
 
-```javascript
-const { generatePushId, encodeFirebaseKey} = require('@bagubagu/utils');
+```js
+const { generatePushId, encodeFirebaseKey } = require("@bagubagu/utils");
 ```
 
 ## API
+
+### getHostedZoneByName
+
+Return Hosted Zone Id by providing its hosted zone name
+
+```ts
+import { config, SharedIniFileCredentials } from "aws-sdk";
+import { getHostedZoneByName } from "@bagubagu/utils";
+
+const credentials = new SharedIniFileCredentials();
+const hostedZoneName = "cokodidi.com";
+
+const result = await getHostedZoneByName({ hostedZoneName, credentials });
+console.log(result); // { hostedZoneId: 'Z2U8QZRMLEMY1M' }
+```
 
 ### generatePushId
 
 Generate a firebase like push Id.
 
 ```typescript
-import { generatePushId } from '@bagubagu/utils';
+import { generatePushId } from "@bagubagu/utils";
 
 const pushId = generatePushId();
-console.log(pushId);  // -KiA4eelV_DYbflp0YcW
+console.log(pushId); // -KiA4eelV_DYbflp0YcW
 ```
 
 ### generateReadableId
@@ -40,10 +55,10 @@ console.log(pushId);  // -KiA4eelV_DYbflp0YcW
 Generate human readable unique Id.
 
 ```typescript
-import { generateReadableId } from '@bagubagu/utils';
+import { generateReadableId } from "@bagubagu/utils";
 
 console.log(generateReadableId()); // black-velvet-48
-console.log(generateReadableId({language: 'id'})); // kursi-cantik-39
+console.log(generateReadableId({ language: "id" })); // kursi-cantik-39
 ```
 
 ### encodeFirebaseKey
@@ -53,10 +68,10 @@ Consequently we are unable to use email address as key. Use encodeFirebaseKey to
 encode email address then use it as key.
 
 ```typescript
-import {encodeFirebaseKey} from '@bagubagu/utils';
+import { encodeFirebaseKey } from "@bagubagu/utils";
 
-const email = 'monyet@kambing.com';
-const key = encodeFirebaseKey(email); // monyet%40kambing%2Ecom 
+const email = "monyet@kambing.com";
+const key = encodeFirebaseKey(email); // monyet%40kambing%2Ecom
 ```
 
 ### decodeFirebaseKey
@@ -64,10 +79,10 @@ const key = encodeFirebaseKey(email); // monyet%40kambing%2Ecom
 Decode an encoded firebase key.
 
 ```typescript
-import { decodeFirebaseKey } from '@bagubagu/utils';
+import { decodeFirebaseKey } from "@bagubagu/utils";
 
-const encodedKey = 'monyet%40kambing%2Ecom';
-console.log(decodeFirebaseKey(encodeKey));  // monyet@kambing.com
+const encodedKey = "monyet%40kambing%2Ecom";
+console.log(decodeFirebaseKey(encodeKey)); // monyet@kambing.com
 ```
 
 ### objectEntries
@@ -80,32 +95,36 @@ Requires tsconfig.json to set
 import { objectEntries } from "@bagubagu/utils";
 
 const weapons = {
-    thor: "mjolnir", spiderman: "web",
-    wonderwoman: "rope", hulk: "rage"
+  thor: "mjolnir",
+  spiderman: "web",
+  wonderwoman: "rope",
+  hulk: "rage"
 };
 
 for (const [key, value] of objectEntries(weapons)) {
-    if (key === "hulk") {
-        console.log(key + ': ' + value);    // hulk: rage
-    }
+  if (key === "hulk") {
+    console.log(key + ": " + value); // hulk: rage
+  }
 }
 ```
 
 ### getRandom
 
 Get Random number between floor and ceiling
-```typescript
-import { getRandom } from '@bagubagu/utils';
 
-console.log(getRandom(1,10));   // output a number between 1 and 10
+```typescript
+import { getRandom } from "@bagubagu/utils";
+
+console.log(getRandom(1, 10)); // output a number between 1 and 10
 ```
 
 ### date2String
 
 Change date value to string value with semantic format
+
 ```typescript
-import { date2String } from '@bagubagu/utils';
+import { date2String } from "@bagubagu/utils";
 
 const dateValue = new Date();
-console.log(date2String(dateValue));   // output a string with 'yyyy-mm-dd' format
+console.log(date2String(dateValue)); // output a string with 'yyyy-mm-dd' format
 ```
