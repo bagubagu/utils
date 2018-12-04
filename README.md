@@ -128,3 +128,34 @@ import { date2String } from "@bagubagu/utils";
 const dateValue = new Date();
 console.log(date2String(dateValue)); // output a string with 'yyyy-mm-dd' format
 ```
+
+### removeEmptyValues
+
+Remove empty values of an object
+
+```typescript
+import { removeEmptyValues } from "@bagubagu/utils";
+
+const weapons = {
+  thor: "mjolnir",
+  spiderman: "",
+  wonderwoman: null,
+  hulk: undefined
+};
+console.log(removeEmptyValues(weapons)); // output { thor: 'mjolnir' }
+```
+
+### groupBy
+
+Group array of object by key name
+
+```typescript
+import { groupBy } from "@bagubagu/utils";
+
+const heroes = [
+  { name: "Spiderman", age: 15 },
+  { name: "Thor", age: 35 },
+  { name: "Loki", age: 35 },
+];
+console.log(groupBy(heroes, "age")); // output { "35": [...], "15": [...] }
+```
