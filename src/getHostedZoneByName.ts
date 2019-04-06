@@ -1,4 +1,4 @@
-import { config, Route53 } from "aws-sdk";
+import { Route53 } from "aws-sdk";
 
 interface getHostedZoneByNameInput {
   hostedZoneName: string;

@@ -43,7 +43,7 @@ console.log(result); // { hostedZoneId: 'Z2U8QZRMLEMY1M' }
 
 Generate a firebase like push Id.
 
-```typescript
+```ts
 import { generatePushId } from "@bagubagu/utils";
 
 const pushId = generatePushId();
@@ -54,7 +54,7 @@ console.log(pushId); // -KiA4eelV_DYbflp0YcW
 
 Generate human readable unique Id.
 
-```typescript
+```ts
 import { generateReadableId } from "@bagubagu/utils";
 
 console.log(generateReadableId()); // black-velvet-48
@@ -67,7 +67,7 @@ Firebase does not allow database key to contain following characters: '.', '#', 
 Consequently we are unable to use email address as key. Use encodeFirebaseKey to
 encode email address then use it as key.
 
-```typescript
+```ts
 import { encodeFirebaseKey } from "@bagubagu/utils";
 
 const email = "monyet@kambing.com";
@@ -78,7 +78,7 @@ const key = encodeFirebaseKey(email); // monyet%40kambing%2Ecom
 
 Decode an encoded firebase key.
 
-```typescript
+```ts
 import { decodeFirebaseKey } from "@bagubagu/utils";
 
 const encodedKey = "monyet%40kambing%2Ecom";
@@ -91,7 +91,7 @@ Make object keys and values available through for of loop.
 Requires tsconfig.json to set
 `compilerOptions.target: "es2015"` and `compilerOptions.lib: [ "es2015" ]`
 
-```typescript
+```ts
 import { objectEntries } from "@bagubagu/utils";
 
 const weapons = {
@@ -112,7 +112,7 @@ for (const [key, value] of objectEntries(weapons)) {
 
 Get Random number between floor and ceiling
 
-```typescript
+```ts
 import { getRandom } from "@bagubagu/utils";
 
 console.log(getRandom(1, 10)); // output a number between 1 and 10
@@ -122,7 +122,7 @@ console.log(getRandom(1, 10)); // output a number between 1 and 10
 
 Change date value to string value with semantic format
 
-```typescript
+```ts
 import { date2String } from "@bagubagu/utils";
 
 const dateValue = new Date();

@@ -1,6 +1,5 @@
+import { SharedIniFileCredentials } from "aws-sdk";
 import { getHostedZoneByName } from "../getHostedZoneByName";
-
-import { config, SharedIniFileCredentials } from "aws-sdk";
 
 const credentials = new SharedIniFileCredentials();
 const hostedZoneName = "cokodidi.com";

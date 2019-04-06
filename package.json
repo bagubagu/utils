@@ -41,7 +41,9 @@
   "devDependencies": {
     "@types/faker": "^4.1.0",
     "@types/firebase": "^2.4.31",
+    "@types/google-libphonenumber": "^7.4.17",
     "@types/jest": "^19.2.2",
+    "@types/joi": "^14.3.2",
     "@types/node": "^7.0.13",
     "aws-sdk": "^2.291.0",
     "jest": "^19.0.2",
@@ -49,5 +51,10 @@
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "google-libphonenumber": "^3.2.2",
+    "joi": "^14.3.1",
+    "joi-phone-number": "^2.1.1",
+    "libphonenumber-js": "^1.7.15"
+  }
 }
