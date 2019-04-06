@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: node:6.9.1
-    working_directory: /home/ubuntu/utils
+      - image: circleci/node:current
+    working_directory: ~/utils
     steps:
       - checkout
       - run: npm install
