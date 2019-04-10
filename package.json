@@ -51,6 +51,7 @@
     "typescript": "^3.4.3"
   },
   "dependencies": {
-    "google-libphonenumber": "^3.2.2"
+    "google-libphonenumber": "^3.2.2",
+    "isemail": "^3.2.0"
   }
 }

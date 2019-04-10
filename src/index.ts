@@ -6,6 +6,6 @@ export { getRandom } from "./getRandom";
 export { date2String } from "./date2String";
 export { removeEmptyValues } from "./removeEmptyValues";
 export { groupBy } from "./groupBy";
-// export { isEmail } from "./isEmail";
+export { isEmail } from "./isEmail";
 export { isPhone } from "./isPhone";
 export { toE164 } from "./toE164";
