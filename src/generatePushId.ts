@@ -14,8 +14,7 @@
  */
 
 // Modeled after base64 web-safe chars, but ordered by ASCII.
-const PUSH_CHARS =
-  "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";
+const PUSH_CHARS = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz";
 
 export const generatePushId = (): string => {
   // Timestamp of last push, used to prevent local collisions if you push twice in one ms.
@@ -38,8 +37,7 @@ export const generatePushId = (): string => {
     now = Math.floor(now / 64);
   }
 
-  if (now !== 0)
-    throw new Error("We should have converted the entire timestamp.");
+  if (now !== 0) throw new Error("We should have converted the entire timestamp.");
 
   let id = timeStampChars.join("");
 
