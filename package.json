@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "google-libphonenumber": "^3.2.2",
+    "is-online": "^8.2.0",
     "isemail": "^3.2.0"
   }
 }

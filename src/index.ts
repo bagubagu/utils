@@ -8,4 +8,6 @@ export { removeEmptyValues } from "./removeEmptyValues";
 export { groupBy } from "./groupBy";
 export { isEmail } from "./isEmail";
 export { isPhone } from "./isPhone";
+export { isDomainName } from "./isDomainName";
+export { isOnline } from "./isOnline";
 export { toE164 } from "./toE164";
