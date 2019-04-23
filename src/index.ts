@@ -11,3 +11,4 @@ export { isPhone } from "./isPhone";
 export { isDomainName } from "./isDomainName";
 export { isOnline } from "./isOnline";
 export { toE164 } from "./toE164";
+export { noop } from "./noop";
